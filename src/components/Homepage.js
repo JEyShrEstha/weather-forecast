@@ -7,7 +7,7 @@ const Homepage = ({ onCityFound }) => {
   const [city, SetCity] = useState("");
 
   const getLocation = (cityName) => {
-    const url = `http://dataservice.accuweather.com/locations/v1/search?apikey=${apikey}&q=${cityName}`;
+    const url = `https://dataservice.accuweather.com/locations/v1/search?apikey=${apikey}&q=${cityName}`;
     fetch(url)
       .then((res) => res.json())
       .then((res) => res.find((loc) => loc.Type === "City"))
