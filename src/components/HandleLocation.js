@@ -27,7 +27,7 @@ const HandleLocation = () => {
   useEffect(() => {
     if (locationKey) {
       fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${apikey}`
+        `https://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationKey}?apikey=${apikey}`
       )
         .then((res) => res.json())
         .then((res) => {
